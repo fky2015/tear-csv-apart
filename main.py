@@ -50,7 +50,9 @@ def filter_cols(row: list, rule: list)->list:
         :param row:list:
         :param rule:list:
     """
-    return [col for i, col in enumerate(row, 1) if i in rule]
+
+    # return [col for i, col in enumerate(row, 1) if i in rule]
+    return [row[i-1] for i in rule]
 
 
 # get the value
